@@ -1,4 +1,8 @@
-import graph_traversal
+import sys
+sys.path.append('..')
+
+from graph_traversal import Graph
+import pprint
 
 graph = Graph()
 
@@ -11,7 +15,7 @@ graph.set_node_names(('Mountain View',   # 0
                       'Shanghai',        # 3
                       'Berlin',          # 4
                       'Sao Paolo',       # 5
-                      'Bangalore'))      # 6 
+                      'Bangalore'))      # 6
 
 graph.insert_edge(51, 0, 1)     # MV <-> SF
 graph.insert_edge(51, 1, 0)     # SF <-> MV
@@ -33,26 +37,26 @@ graph.insert_edge(9471, 5, 2)   # Sao Paolo <-> London
 # for this problem and should produce None in the
 # Adjacency List, etc.
 
-import pprint
+
 pp = pprint.PrettyPrinter(indent=2)
 
-print "Edge List"
+print ("Edge List")
 pp.pprint(graph.get_edge_list_names())
 
-print "\nAdjacency List"
+print ("\nAdjacency List")
 pp.pprint(graph.get_adjacency_list_names())
 
-print "\nAdjacency Matrix"
+print ("\nAdjacency Matrix")
 pp.pprint(graph.get_adjacency_matrix())
 
-print "\nDepth First Search"
+print ("\nDepth First Search")
 pp.pprint(graph.dfs_names(2))
 
 # Should print:
 # Depth First Search
 # ['London', 'Shanghai', 'Mountain View', 'San Francisco', 'Berlin', 'Sao Paolo']
 
-print "\nBreadth First Search"
+print ("\nBreadth First Search")
 pp.pprint(graph.bfs_names(2))
 # test error reporting
 # pp.pprint(['Sao Paolo', 'Mountain View', 'San Francisco', 'London', 'Shanghai', 'Berlin'])

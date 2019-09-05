@@ -9,10 +9,10 @@ class BinaryTree(object):
         self.root = Node(root)
 
     def search(self, find_val):
-        return self.preorder_search(tree.root, find_val)
+        return self.preorder_search(self.root, find_val)
 
     def print_tree(self):
-        return self.preorder_print(tree.root, "")[:-1]
+        return self.preorder_print(self.root, "")[:-1]
 
     def preorder_search(self, start, find_val):
         if start:

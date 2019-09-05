@@ -3,6 +3,7 @@ class Element(object):
         self.value = value
         self.next = None
 
+
 class LinkedList(object):
     def __init__(self, head=None):
         self.head = head
@@ -66,4 +67,3 @@ class LinkedList(object):
             return deleted_element
         else:
             return None
-                

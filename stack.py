@@ -1,7 +1,8 @@
-import linked_list as LinkedList
+from linked_list import LinkedList
+
 
 class Stack(object):
-    def __init__(self,top=None):
+    def __init__(self, top=None):
         self.ll = LinkedList(top)
 
     def push(self, new_element):
